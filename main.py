@@ -14,9 +14,9 @@ def custom_openapi():
         if not r.path == "/":
             documented_routes.append(r)
     openapi_schema = get_openapi(
-        title="SAP RFC Bridge",
+        title="PDF Signer",
         version="1.0.0",
-        description="Provides a bridge to communicate with SAP ECC",
+        description="Sign pdf",
         routes=documented_routes,
     )
     app.openapi_schema = openapi_schema

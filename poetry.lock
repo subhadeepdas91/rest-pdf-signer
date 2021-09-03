@@ -1,4 +1,12 @@
 [[package]]
+name = "aiofiles"
+version = "0.7.0"
+description = "File support for asyncio."
+category = "main"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[[package]]
 name = "appdirs"
 version = "1.4.4"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -124,16 +132,16 @@ dotenv = ["python-dotenv (>=0.10.4)"]
 email = ["email-validator (>=1.0.3)"]
 
 [[package]]
-name = "pynwrfc"
-version = "2.0.6"
-description = "Python bindings for SAP NetWeaver RFC Library"
+name = "python-multipart"
+version = "0.0.5"
+description = "A streaming multipart parser for Python"
 category = "main"
 optional = false
 python-versions = "*"
 
-[package.source]
-type = "url"
-url = "https://github.com/SAP/PyRFC/releases/download/2.0.6/pynwrfc-2.0.6-cp38-cp38-linux_x86_64.whl"
+[package.dependencies]
+six = ">=1.4.0"
+
 [[package]]
 name = "regex"
 version = "2021.7.1"
@@ -141,6 +149,14 @@ description = "Alternative regular expression module, to replace re."
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "starlette"
@@ -196,9 +212,13 @@ standard = ["websockets (>=9.1)", "httptools (>=0.2.0,<0.3.0)", "watchgod (>=0.6
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "a8e13284bbefc7300626291570f0e8b6bbd999050347a950a6462a6d88a240f9"
+content-hash = "46755711f80495bba655f9a98be075aea01bcde2b09d4c33a22fded7b3c53be8"
 
 [metadata.files]
+aiofiles = [
+    {file = "aiofiles-0.7.0-py3-none-any.whl", hash = "sha256:c67a6823b5f23fcab0a2595a289cec7d8c863ffcb4322fb8cd6b90400aedfdbc"},
+    {file = "aiofiles-0.7.0.tar.gz", hash = "sha256:a1c4fc9b2ff81568c83e21392a82f344ea9d23da906e4f6a52662764545e19d4"},
+]
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
@@ -284,7 +304,9 @@ pydantic = [
     {file = "pydantic-1.8.2-py3-none-any.whl", hash = "sha256:fec866a0b59f372b7e776f2d7308511784dace622e0992a0b59ea3ccee0ae833"},
     {file = "pydantic-1.8.2.tar.gz", hash = "sha256:26464e57ccaafe72b7ad156fdaa4e9b9ef051f69e175dbbb463283000c05ab7b"},
 ]
-pynwrfc = []
+python-multipart = [
+    {file = "python-multipart-0.0.5.tar.gz", hash = "sha256:f7bb5f611fc600d15fa47b3974c8aa16e93724513b49b5f95c81e6624c83fa43"},
+]
 regex = [
     {file = "regex-2021.7.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:494d0172774dc0beeea984b94c95389143db029575f7ca908edd74469321ea99"},
     {file = "regex-2021.7.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:8cf6728f89b071bd3ab37cb8a0e306f4de897553a0ed07442015ee65fbf53d62"},
@@ -323,6 +345,10 @@ regex = [
     {file = "regex-2021.7.1-cp39-cp39-win32.whl", hash = "sha256:1ccbd41dbee3a31e18938096510b7d4ee53aa9fce2ee3dcc8ec82ae264f6acfd"},
     {file = "regex-2021.7.1-cp39-cp39-win_amd64.whl", hash = "sha256:18040755606b0c21281493ec309214bd61e41a170509e5014f41d6a5a586e161"},
     {file = "regex-2021.7.1.tar.gz", hash = "sha256:849802379a660206277675aa5a5c327f5c910c690649535863ddf329b0ba8c87"},
+]
+six = [
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 starlette = [
     {file = "starlette-0.14.2-py3-none-any.whl", hash = "sha256:3c8e48e52736b3161e34c9f0e8153b4f32ec5d8995a3ee1d59410d92f75162ed"},

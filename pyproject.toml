@@ -9,7 +9,8 @@ python = "^3.8"
 fastapi = "^0.65.2"
 uvicorn = "^0.14.0"
 orjson = "^3.5.4"
-pynwrfc = {url = "https://github.com/SAP/PyRFC/releases/download/2.0.6/pynwrfc-2.0.6-cp38-cp38-linux_x86_64.whl"}
+python-multipart = "^0.0.5"
+aiofiles = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
